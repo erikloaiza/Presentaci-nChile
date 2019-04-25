@@ -42,15 +42,43 @@
 		}
 	});
     </script>
-    <a-scene embedded arjs>
+    <a-scene embedded  arjs='debugUIEnabled: false; patternRatio: 0.9' vr-mode-ui="enabled: false">
         <!--Assets-->
         <a-assets>
-            <video id="video1" loop="true" src="https://www.youtube.com/watch?v=jliAUPj0Gko"></video>
+            <video id="carnavalito" loop="true" src="video/carnavalito.mp4"></video>
+            <video id="cueca" loop="true" src="video/cueca.mp4"></video>
+            <video id="mapuche" loop="true" src="video/mapuche.mp4"></video>
+            <video id="sajuarina" loop="true" src="video/sajuarina.mp4"></video>
+            <video id="musica-norte" loop="true" src="video/musica-norte.mp4"></video>
+            <video id="musica-centro" loop="true" src="video/musica-centro.mp4"></video>
+            <video id="musica-sur" loop="true" src="video/musica-sur.mp4"></video>
+            <video id="musica-rapa" loop="true" src="video/musica-rapa.mp4"></video>
+
         </a-assets>            
     <!-- define your markers -->
-    <a-marker preset='hiro' registerevents>
-        <!-- here define the content to display on top of the marker -->
-        <a-video src="#video1" width="3.6" height="2" position="0 0 0" rotation="-90 0 0"></a-video> 
+    <a-marker type='pattern' url="patt/carnavalito.patt"registerevents >
+        <a-video src="#carnavalito" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/cueca.patt"registerevents >
+        <a-video src="#cueca" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/mapuche.patt"registerevents >
+        <a-video src="#mapuche" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/sajuarina.patt"registerevents >
+        <a-video src="#sajuarina" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/musica-norte.patt"registerevents >
+        <a-video src="#musica-norte" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/musica-centro.patt"registerevents >
+        <a-video src="#musica-centro" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/musica-sur.patt"registerevents >
+        <a-video src="#musica-sur" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
+    </a-marker>
+    <a-marker type='pattern' url="patt/musica-rapa.patt"registerevents >
+        <a-video src="#musica-rapa" width="2.7" height="1.5" position="0 0 0" rotation="-90 0 0"></a-video> 
     </a-marker>
     <!-- define a simple camera -->
     <a-entity camera></a-entity>
